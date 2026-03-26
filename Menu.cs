@@ -10,6 +10,11 @@ namespace Taller3D261
     {
         public void Execute()
         {
+            E1();
+        }
+
+        private void Example()
+        {
             string name;
             int age;
 
@@ -19,10 +24,35 @@ namespace Taller3D261
             age = GetAge();
             Console.WriteLine($"Tienes {age} años.");
             Console.WriteLine($"El próximo año tendrás {age + 1}");
-                
+
+
         }
 
-        public int GetAge()
+        private void E1()
+        {
+            int b;
+            int h;
+            b = GetPositiveInt("Introduce la base");
+            h = GetPositiveInt("Introduce la altura");
+            Console.WriteLine($"El perímetro es {2 * b + 2 * h} y el área es {b * h}");
+        }
+
+        private int GetPositiveInt(string message)
+        {
+            int value = -1;
+            while(value<=0)
+            {
+                Console.WriteLine(message);
+                value= int.Parse(Console.ReadLine());
+                if(value<=0)
+                {
+                    Console.WriteLine("El valor debe ser positivo");
+                }
+            }
+            return value;
+        }
+
+        private int GetAge()
         {
             bool isValid = false;
             int age = 0;
