@@ -10,7 +10,23 @@ namespace Taller3D261
     {
         public void Execute()
         {
-            E1();
+            ShowShapes();
+        }
+
+
+        private void ShowShapes()
+        {
+            List<Shape> shapes = new List<Shape>();
+
+            shapes.Add(new Triangle("t1", 10, 20));
+            shapes.Add(new Triangle("t2", 20, 30));
+            shapes.Add(new Circle("c1", 10));
+            shapes.Add(new Circle("c2", 20));
+
+            foreach (Shape shape in shapes)
+            {
+                Console.WriteLine($"La figura {shape.Name} tiene de área {shape.GetArea()}");
+            }
         }
 
         private void Example()
