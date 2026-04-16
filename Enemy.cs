@@ -9,5 +9,6 @@ namespace Taller3D261
     internal class Enemy
     {
         private string name;
+        private int health;
     }
 }
