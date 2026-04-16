@@ -10,5 +10,11 @@ namespace Taller3D261
     {
         private string name;
         private int health;
+
+        public Enemy(string name, int health)
+        {
+            this.name = name;
+            this.health = health;
+        }
     }
 }
