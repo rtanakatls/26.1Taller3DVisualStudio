@@ -8,6 +8,8 @@ namespace Taller3D261
 {
     internal class Menu
     {
+        private List<Shape> shapes;
+
         public void Execute()
         {
             ShowShapes();
@@ -16,7 +18,7 @@ namespace Taller3D261
 
         private void ShowShapes()
         {
-            List<Shape> shapes = new List<Shape>();
+            shapes = new List<Shape>();
 
             shapes.Add(new Triangle("t1", 10, 20));
             shapes.Add(new Triangle("t2", 20, 30));
