@@ -12,6 +12,7 @@ namespace Taller3D261
 
         public void Execute()
         {
+            Console.WriteLine("Test");
             ShowShapes();
         }
 
